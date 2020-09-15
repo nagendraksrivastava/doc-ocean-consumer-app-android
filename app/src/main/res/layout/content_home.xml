@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/option_layout" />
+
+    <LinearLayout
+        android:id="@+id/address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/home_page_address_text_view_background"
+        android:orientation="vertical">
+
+        <customer.dococean.com.patient.views.custom.DococeanTextView
+            android:id="@+id/selected_address_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:text="Selected Address"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="12sp" />
+
+        <customer.dococean.com.patient.views.custom.DococeanTextView
+            android:id="@+id/user_address_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:hint=" Enter Address "
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <customer.dococean.com.patient.views.custom.DocOceanButton
+            android:id="@+id/schedule_later_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-10dp"
+            android:gravity="center"
+            android:text="Schedule Later"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_500" />
+
+
+        <customer.dococean.com.patient.views.custom.DocOceanButton
+            android:id="@+id/book_now_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-10dp"
+            android:gravity="center"
+            android:text="Book now"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expert_place_charges_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/primary_light"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_above="@+id/option_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Outdoor charges "
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:id="@+id/outdoor_charges_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/patient_place_charges_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/primary_light"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Indoor charges"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:id="@+id/indoor_charges_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

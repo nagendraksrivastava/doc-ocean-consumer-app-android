@@ -1,0 +1,89 @@
+buildscript {
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+}
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "customer.dococean.com.patient"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary(true)
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "KEY", "\"!OCE@N-DOC!\"")
+        }
+        debug {
+            buildConfigField("String", "KEY", "\"!OCE@N-DOC!\"")
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.7
+        sourceCompatibility 1.7
+    }
+}
+
+ext {
+    supportLibVersion = '25.0.1'
+    googlePlayServicesVersion = '10.0.1'
+    retrofitVersion = '2.1.0'
+    rxAndroidVersion = '1.2.1'
+    rxJavaVersion = '1.1.6'
+    httpLogInterceptor = '3.3.0'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:${supportLibVersion}"
+    compile "com.android.support:design:${supportLibVersion}"
+    compile "com.android.support:support-v4:${supportLibVersion}"
+    compile "com.android.support:cardview-v7:${supportLibVersion}"
+    compile "com.android.support:recyclerview-v7:${supportLibVersion}"
+    compile "com.google.android.gms:play-services-gcm:${googlePlayServicesVersion}"
+    compile "com.google.android.gms:play-services-maps:${googlePlayServicesVersion}"
+    compile "com.google.android.gms:play-services-location:${googlePlayServicesVersion}"
+    compile "com.google.android.gms:play-services-places:${googlePlayServicesVersion}"
+    compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}"
+    compile "io.reactivex:rxandroid:${rxAndroidVersion}"
+    compile "io.reactivex:rxjava:${rxJavaVersion}"
+    compile "com.squareup.okhttp3:logging-interceptor:${httpLogInterceptor}"
+    compile "com.google.firebase:firebase-messaging:${googlePlayServicesVersion}"
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:support-v4:24.1.1'
+    compile 'com.sothree.slidinguppanel:library:3.3.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+        transitive = true;
+    }
+}
+apply plugin: 'com.google.gms.google-services'
+
+
+
+
+

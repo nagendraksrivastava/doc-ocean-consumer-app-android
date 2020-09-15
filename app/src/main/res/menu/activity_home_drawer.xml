@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/my_bookings"
+            android:icon="@drawable/ic_history_black_48dp"
+            android:title="My Bookings" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_payment_black_48dp"
+            android:title="Payment" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_box_black_48dp"
+            android:title="Profile" />
+        <!-- <item
+           android:id="@+id/nav_refer_friend"
+           android:icon="@drawable/ic_group_black_48dp"
+           android:title="Refer a friend" /> -->
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share_black_48dp"
+            android:title="Share" />
+
+        <item
+            android:id="@+id/nav_rate_us"
+            android:icon="@drawable/ic_stars_black_48dp"
+            android:title="Rate Us" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_accessibility_black_48dp"
+            android:title="About Us" />
+    </group>
+
+    <item android:title="Logout">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_power_settings_new_black_48dp"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

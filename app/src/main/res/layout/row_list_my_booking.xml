@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:cardElevation="4dp"
+    app:contentPadding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_600"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Expert Type:"
+                android:textColor="@color/grey_400"
+                android:textSize="@dimen/size_18_sp"
+                android:textStyle="bold" />
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:id="@+id/expert_type_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/button_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_600"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Expert Name:"
+                android:textColor="@color/grey_400"
+                android:textSize="@dimen/size_18_sp"
+                android:textStyle="bold" />
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:id="@+id/expert_name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/button_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Id"
+                    android:textColor="@color/small_heading_color"
+                    android:textSize="@dimen/small_heading_size" />
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:id="@+id/booking_id_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booked at"
+                    android:textColor="@color/small_heading_color"
+                    android:textSize="@dimen/small_heading_size" />
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:id="@+id/booked_at_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/view_divider" /> -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Name"
+                android:textColor="@color/small_heading_color"
+                android:textSize="@dimen/small_heading_size" />
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:id="@+id/patient_name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Age"
+                    android:textColor="@color/small_heading_color"
+                    android:textSize="@dimen/small_heading_size" />
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:id="@+id/patient_age_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="Patient Gender"
+                    android:textColor="@color/small_heading_color"
+                    android:textSize="@dimen/small_heading_size" />
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:id="@+id/patient_gender_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"
+                    android:textColor="@color/small_heading_color"
+                    android:textSize="@dimen/small_heading_size" />
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:id="@+id/payment_cost_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="Payment mode"
+                    android:textColor="@color/small_heading_color"
+                    android:textSize="@dimen/small_heading_size" />
+
+                <customer.dococean.com.patient.views.custom.DococeanTextView
+                    android:id="@+id/payment_mode_type_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service Opted"
+                android:textColor="@color/small_heading_color"
+                android:textSize="@dimen/small_heading_size" />
+
+            <customer.dococean.com.patient.views.custom.DococeanTextView
+                android:id="@+id/service_opted_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <customer.dococean.com.patient.views.custom.DococeanTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Symptoms"
+            android:textColor="@color/small_heading_color"
+            android:textSize="@dimen/small_heading_size" />
+
+        <customer.dococean.com.patient.views.custom.DococeanTextView
+            android:id="@+id/symptoms_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1" />
+
+
+        <customer.dococean.com.patient.views.custom.DococeanTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Instructions"
+            android:textColor="@color/small_heading_color"
+            android:textSize="@dimen/small_heading_size" />
+
+        <customer.dococean.com.patient.views.custom.DococeanTextView
+            android:id="@+id/instruction_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

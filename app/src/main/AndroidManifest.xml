@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="customer.dococean.com.patient">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".DococeanApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_debug_api_key" />
+
+        <activity
+            android:name=".views.activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activities.SignupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activities.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activities.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".views.activities.ChangePasswordActivity" />
+        <activity
+            android:name=".views.activities.AddPatientInformationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <provider
+            android:name=".db.DocOceanContentProvider"
+            android:authorities="customer.dococean.com.patient"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.activities.BookingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".views.activities.AddressSearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".views.activities.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.PatientListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.ReferFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.AboutUsActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".firebase.DococeanFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.DococeanFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".views.activities.BookingConfirmedActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".services.DocOceanService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".views.activities.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.activities.SelectCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.SelectServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.TermsAndConditionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.MyBookingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activities.PaymentActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f7a8ee22547437706856560c16ae5056068390d9" />
+    </application>
+
+</manifest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/nav_profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/placeholder"
+        app:civ_border_color="@color/grey_300"
+        app:civ_border_width="2dp" />
+
+    <customer.dococean.com.patient.views.custom.DococeanTextView
+        android:id="@+id/nav_user_name_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/button_text_color" />
+
+    <customer.dococean.com.patient.views.custom.DococeanTextView
+        android:id="@+id/nav_profile_user_email_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/button_text_color" />
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            sothree:umanoDragView="@+id/dragView"
+            sothree:umanoOverlay="true"
+            sothree:umanoPanelHeight="150dp"
+            sothree:umanoParallaxOffset="10dp"
+            sothree:umanoScrollableView="@+id/list"
+            sothree:umanoShadowHeight="4dp">
+
+            <!-- Main Content -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/map"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <!-- SLIDING LAYOUT -->
+            <LinearLayout
+                android:id="@+id/dragView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="false"
+                android:orientation="vertical"
+                android:paddingLeft="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/expert_details_LL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/expert_image_view"
+                        android:orientation="vertical">
+
+                        <customer.dococean.com.patient.views.custom.DococeanTextView
+                            android:id="@+id/booking_id_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="18sp" />
+
+                        <customer.dococean.com.patient.views.custom.DococeanTextView
+                            android:id="@+id/expert_name_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <customer.dococean.com.patient.views.custom.DococeanTextView
+                            android:id="@+id/expert_degree_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black" />
+
+                        <customer.dococean.com.patient.views.custom.DococeanTextView
+                            android:id="@+id/expert_specialist_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp" />
+
+                        <customer.dococean.com.patient.views.custom.DococeanTextView
+                            android:id="@+id/expert_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/expert_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/expert_details_LL"
+                        android:layout_alignTop="@+id/expert_details_LL"
+                        android:src="@drawable/placeholder" />
+
+                    <TableLayout
+                        android:id="@+id/confirmed_opted_services_table_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/expert_image_view"
+                        android:layout_below="@id/expert_image_view"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:stretchColumns="*"
+                        android:visibility="gone" />
+
+                    <customer.dococean.com.patient.views.custom.DococeanTextView
+                        android:id="@+id/address_text_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/confirmed_opted_services_table_layout"
+                        android:layout_below="@id/confirmed_opted_services_table_layout"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/text.address"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <customer.dococean.com.patient.views.custom.DococeanTextView
+                        android:id="@+id/expert_address_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/address_text_TV"
+                        android:layout_below="@id/address_text_TV"
+                        android:layout_marginTop="10dp" />
+
+                    <!-- Expert details means it is related expert discription-->
+                    <customer.dococean.com.patient.views.custom.DococeanTextView
+                        android:id="@+id/expert_details_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expert_address_TV"
+                        android:layout_marginTop="10dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    </RelativeLayout>
+</LinearLayout>

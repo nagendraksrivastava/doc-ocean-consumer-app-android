@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "580851680268",
+    "firebase_url": "https://dococean-patient.firebaseio.com",
+    "project_id": "dococean-patient",
+    "storage_bucket": "dococean-patient.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580851680268:android:fbb7a37f0981b894",
+        "android_client_info": {
+          "package_name": "customer.dococean.com.patient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580851680268-ptekg2ok79o1f83q5080kgakmqahgt1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgj9M8y0yq3Ksoj1snBPOq_iKdY4tPM7s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

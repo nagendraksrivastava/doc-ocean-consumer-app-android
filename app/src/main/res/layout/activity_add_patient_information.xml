@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/first_name_TIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <customer.dococean.com.patient.views.custom.DocOceanEditText
+                    android:id="@+id/first_name_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full name" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <customer.dococean.com.patient.views.custom.DocOceanEditText
+                    android:id="@+id/email_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email if available"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phone_no_TIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <customer.dococean.com.patient.views.custom.DocOceanEditText
+                    android:id="@+id/phone_no_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone number if available"
+                    android:inputType="phone" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/patient_date_of_birth_TIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <customer.dococean.com.patient.views.custom.DocOceanEditText
+                    android:id="@+id/patient_date_of_birth_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Date of birth"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Spinner
+                android:id="@+id/relationship_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <customer.dococean.com.patient.views.custom.DocOceanEditText
+                    android:id="@+id/extra_information_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Chronic health issues (like diabetes, high bp, any allergies)" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <customer.dococean.com.patient.views.custom.DocOceanButton
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/button_background"
+        android:text="Submit"
+        android:textColor="@color/button_text_color" />
+
+</LinearLayout>
