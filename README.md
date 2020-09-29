@@ -1,4 +1,4 @@
-# doc-ocean-android
+# doc-ocean-patient-app
 
 Doc-Ocean was a startup launched in 2015 with an aim of uberising health care, the idea was to connect patients to the nearby health care professionals (Doctor, Nurses) and avail of the services in the comfort of home.
 
